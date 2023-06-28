@@ -20,6 +20,7 @@ use App\Http\Controllers\C_Session;
 
     Route::group(['middleware' => ['isLogin'],'prefix' => 'dashboard'], function() {
         Route::get('/','App\Http\Controllers\dashboard@home')->name('dashboard');
+        
         // Admin Berita
         Route::get('/berita','App\Http\Controllers\C_Berita@index')->name('dashboard.berita');
         // Route::get('/form/berita','App\Http\Controllers\C_Berita@formberita')->name('dashboard.form.berita');
