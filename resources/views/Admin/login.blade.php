@@ -20,26 +20,51 @@
 </head>
 
 <body>
+  
   <div class="container-scroller">
     <div class="container-fluid page-body-wrapper full-page-wrapper">
       <div class="content-wrapper d-flex align-items-center auth px-0">
         <div class="row w-100 mx-0">
           <div class="col-lg-4 mx-auto">
             <div class="auth-form-light text-left py-5 px-4 px-sm-5">
+              @error('akses')
+                  <div class="alert alert-danger">{{ $message }}
+                  </div> 
+                  @enderror
+              @if ($message = Session::get('success'))
+              <div class="alert alert-success">{{ $message }}
+              </div>
+                @endif
               <div class="brand-logo">
                 <img src="{{ asset('Admin/images/logo.svg') }}" alt="logo"> 
               </div>
               <h4>Hello! </h4>
               <h6 class="font-weight-light">Sign in to continue.</h6>
-              <form class="pt-3">
+              @error('gagal')
+                <div class="alert alert-danger">{{ $message }}
+                </div> 
+              @enderror
+              <form action="/login/aksi" method="POST" class="pt-3">
+                @csrf
                 <div class="form-group">
-                  <input type="email" class="form-control form-control-lg" id="exampleInputEmail1" placeholder="Username">
+                  <input type="email" value="{{ Session::get('email') }}" name="email" class="form-control form-control-lg" id="exampleInputEmail1" placeholder="Email">
+                    
                 </div>
+                
+                  @error('email')
+                  <div class="alert alert-danger">{{ $message }}
+                  </div> 
+                  @enderror
+                
                 <div class="form-group">
-                  <input type="password" class="form-control form-control-lg" id="exampleInputPassword1" placeholder="Password">
+                  <input type="password" name="password" class="form-control form-control-lg" id="exampleInputPassword1" placeholder="Password">
                 </div>
+                @error('password')
+                  <div class="alert alert-danger">{{ $message }}
+                  </div> 
+                  @enderror
                 <div class="mt-3">
-                  <a class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn" href="../../index.html">SIGN IN</a>
+                  <button class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn" name="submit" type="submit" >SIGN IN</button>
                 </div>
                 <div class="my-2 d-flex justify-content-between align-items-center">
                   <div class="form-check">
@@ -50,14 +75,7 @@
                   </div>
                   <a href="#" class="auth-link text-black">Forgot password?</a>
                 </div>
-                <div class="mb-2">
-                  <button type="button" class="btn btn-block btn-facebook auth-form-btn">
-                    <i class="ti-google mr-2"></i>Connect using Google Account
-                  </button>
-                </div>
-                <div class="text-center mt-4 font-weight-light">
-                  Don't have an account? <a href="register.html" class="text-primary">Create</a>
-                </div>
+                
               </form>
             </div>
           </div>
