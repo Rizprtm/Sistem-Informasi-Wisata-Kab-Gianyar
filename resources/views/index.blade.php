@@ -379,7 +379,7 @@
 			<div class="col-lg-4 intro_col">
 				<div class="intro_item">
 					<div class="intro_item_overlay"></div>
-					<a href="{{ route('main.destinasi.detail', $d->slug) }}"><div class="intro_item_background" style="background-image:url(/assets/images/berita/{{ $d->foto }})"></div></a>
+					<a href="{{ route('main.destinasi.detail', $d->slug) }}"><div class="intro_item_background" style="background-image:url(/assets/images/destinasi/{{ $d->foto }})"></div></a>
 					<div class="intro_item_content d-flex flex-column align-items-center justify-content-center">
 						<div class="intro_date">{{ $d->judul }}</div>
 						<div class="button intro_button"><div class="button_bcg"></div><a href="{{ route('main.destinasi.detail', $d->slug) }}">see more<span></span><span></span><span></span></a></div>

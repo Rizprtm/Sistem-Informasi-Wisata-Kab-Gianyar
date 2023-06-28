@@ -31,14 +31,15 @@
 						<!-- Blog Post -->
 					
 						<div class="blog_post">
+							<div class="blog_post_title"><a href="">{{ $berita->judul }}</a></div>
+									
+									<li class="blog_post_meta_item"><a href="">{{ $berita->kategori->nama }}</a></li>
 							<div class="blog_post_image">
 								<img src="/assets/images/berita/{{ $berita->foto }}">
 								
 							</div>
 							
-							<div class="blog_post_title"><a href="">{{ $berita->judul }}</a></div>
-									
-									<li class="blog_post_meta_item"><a href="">{{ $berita->kategori->nama }}</a></li>
+							
 							
 							<div class="blog_post_text">
 								<p>{!! $berita->deskripsi !!}</p>

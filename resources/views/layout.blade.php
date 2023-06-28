@@ -7,6 +7,7 @@
 <meta name="description" content="Travelix Project">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="csrf-token" content="{{ csrf_token() }}">
+<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 <link rel="stylesheet" type="text/css" href="/styles/bootstrap4/bootstrap.min.css">
 <link href="/plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="/plugins/OwlCarousel2-2.2.1/owl.carousel.css">

@@ -6,22 +6,23 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="csrf-token" content="{{ csrf_token() }}">
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
   <title>Dashboard</title>
   <!-- plugins:css -->
-  <link rel="stylesheet" href="Admin/vendors/feather/feather.css">
-  <link rel="stylesheet" href="Admin/vendors/ti-icons/css/themify-icons.css">
-  <link rel="stylesheet" href="Admin/vendors/css/vendor.bundle.base.css">
-  <link rel="stylesheet" href="Admin/css/mdb.min.css">
-  <link rel="stylesheet" href="Admin/css/jquery-ui.css">
+  <link rel="stylesheet" href="{{ asset('Admin/vendors/feather/feather.css') }}">
+  <link rel="stylesheet" href="{{ asset('Admin/vendors/ti-icons/css/themify-icons.css') }}">
+  <link rel="stylesheet" href="{{ asset('Admin/vendors/css/vendor.bundle.base.css') }}">
+  <link rel="stylesheet" href="{{ asset('Admin/css/mdb.min.css') }}">
+  <link rel="stylesheet" href="{{ asset('Admin/css/jquery-ui.css') }}">
   
   <!-- endinject -->
   <!-- Plugin css for this page -->
-  <link rel="stylesheet" href="Admin/vendors/datatables.net-bs4/dataTables.bootstrap4.css">
-  <link rel="stylesheet" href="Admin/vendors/ti-icons/css/themify-icons.css"> 
-  <link rel="stylesheet" type="Admin/text/css" href="Admin/js/select.dataTables.min.css">
+  <link rel="stylesheet" href="{{ asset('Admin/vendors/datatables.net-bs4/dataTables.bootstrap4.css') }}">
+  <link rel="stylesheet" href="{{ asset('Admin/vendors/ti-icons/css/themify-icons.css') }}"> 
+  <link rel="stylesheet" type="Admin/text/css" href="{{ asset('Admin/js/select.dataTables.min.css') }}">
   <!-- End plugin css for this page -->
   <!-- inject:css -->
-  <link rel="stylesheet" href="Admin/css/vertical-layout-light/style.css">
+  <link rel="stylesheet" href="{{ asset('Admin/css/vertical-layout-light/style.css') }}">
   <!-- endinject -->
   <link rel="shortcut icon" href="Admin/images/favicon.png') }}" /> 
   <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.css" rel="stylesheet">
@@ -233,30 +234,30 @@
   </div>
   <!-- container-scroller -->
   <!-- plugins:js -->
-  <script src="Admin/vendors/js/vendor.bundle.base.js'"></script>
+  <script src="{{ asset('Admin/vendors/js/vendor.bundle.base.js') }}"></script>
  
   <!-- endinject -->
   <!-- Plugin js for this page -->
-  <script src="Admin/vendors/chart.js/Chart.min.js"></script> 
-  <script src="Admin/vendors/datatables.net/jquery.dataTables.js"></script> 
-  <script src="Admin/vendors/datatables.net-bs4/dataTables.bootstrap4.js"></script> 
-  <script src="Admin/js/dataTables.select.min.js"></script> 
+  <script src="{{ asset('Admin/vendors/chart.js/Chart.min.js') }}"></script> 
+  <script src="{{ asset('Admin/vendors/datatables.net/jquery.dataTables.js') }}"></script> 
+  <script src="{{ asset('Admin/vendors/datatables.net-bs4/dataTables.bootstrap4.js') }}"></script> 
+  <script src="{{ asset('Admin/js/dataTables.select.min.js') }}"></script> 
 
   <!-- End plugin js for this page -->
   <!-- inject:js -->
-  <script src="Admin/js/off-canvas.js"></script> 
-  <script src="Admin/js/hoverable-collapse.js"></script>
-  <script src="Admin/js/template.js"></script>  
-  <script src="Admin/js/settings.js"></script> 
-  <script src="'Admin/js/todolist.js"></script> 
+  <script src="{{ asset('Admin/js/off-canvas.js') }}"></script> 
+  <script src="{{ asset('Admin/js/hoverable-collapse.js') }}"></script>
+  <script src="{{ asset('Admin/js/template.js') }}"></script>  
+  <script src="{{ asset('Admin/js/settings.js') }}"></script> 
+  <script src="{{ asset('Admin/js/todolist.js') }}"></script> 
   <!-- endinject -->
   <!-- Custom js for this page-->
-  <script src="Admin/js/dashboard.js"></script>
-  <script src="Admin/js/Chart.roundedBarCharts.js"></script>
-  <script src="Admin/js/new.js"></script>  
+  <script src="{{ asset('Admin/js/dashboard.js') }}"></script>
+  <script src="{{ asset('Admin/js/Chart.roundedBarCharts.js') }}"></script>
+  <script src="{{ asset('Admin/js/new.js') }}"></script>  
 
 
-  <script src="summernote/summernote.min.js"></script>
+  <script src="{{ asset('summernote/summernote.min.js') }}"></script>
   <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>

@@ -29,24 +29,21 @@
 					<div class="blog_post_container">
 
 						<!-- Blog Post -->
-					
+						
 						<div class="blog_post">
-							<div class="blog_post_image">
-								<img src="/assets/images/destinasi/{{ $destinasi->foto }}">
-								
-							</div>
-							
 							<div class="blog_post_title"><a href="">{{ $destinasi->judul }}</a></div>
 									
 									<li class="blog_post_meta_item"><a href="">{{ $destinasi->kategori->nama }}</a></li>
 							
 							<div class="blog_post_text">
+							<div class="blog_post_image">
+								<img src="/assets/images/destinasi/{{ $destinasi->foto }}">
+								
+							</div>
+							
 								<p>{!! $destinasi->deskripsi !!}</p>
 							</div>
-					    	
 						</div>
-
-						
 
 					</div>
 						
