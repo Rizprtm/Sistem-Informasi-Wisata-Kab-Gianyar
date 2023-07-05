@@ -26,8 +26,9 @@ class C_Session extends Controller
             'password' =>$request->password
         ];
         if(Auth::attempt($infologin)){
-            //
+            activity()->causedBy(Auth::user())->log(auth()->user()->email.'login');
             return redirect('/dashboard')->with(['success' => 'Login Berhasil']);
+            
         }else{
             //
             return redirect('login')->withErrors(['gagal' => 'email atau password salah']);
@@ -35,6 +36,7 @@ class C_Session extends Controller
     }
     function logout(){
         Auth::logout();
+        
         return redirect('login')->with(['success' => 'Berhasil logout']);
     }
 }

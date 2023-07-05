@@ -59,6 +59,7 @@ class C_KategoriDestinasi extends Controller
             if (!$validator->passes()) {
                 return response()->json(['code' => 0, 'error' => $validator->errors()->toArray()]);
             } else {
+                
                 M_KategoriDestinasi::create([
                     'nama' => $request->nama,
                 ]);
@@ -85,6 +86,7 @@ class C_KategoriDestinasi extends Controller
             if (!$validator->passes()) {
                 return response()->json(['code' => 0, 'error' => $validator->errors()->toArray()]);
             } else {
+                
                 $data = M_KategoriDestinasi::find($request->id);
                 $data->update([
                     'nama' => $request->nama,

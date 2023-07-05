@@ -18,9 +18,30 @@
 <link rel="stylesheet" type="text/css" href="/styles/responsive.css">
 <link rel="stylesheet" type="text/css" href="/Admin/vendors/css/vendor.bundle.base.css">
 <link rel="stylesheet" type="text/css" href="/Admin/css/mdb.min.css">
+<style>
+	.pageTitleEveryPage{
+		padding: 50px;
+			padding-top: 50px;
+		padding-top: 100px;
+	}
+	.loader {
+		width: 100%;
+		height: 100%;
+		position: fixed;
+		padding-top: 19%;
+		background: rgb(174, 13, 16);
+		padding-left: 48%;
+		margin: auto;
+		z-index: 99999;
+	}
+</style>
+	
 </head>
 
 <body>
+	<div class="loader">
+		<img src="/loader/svg-loaders/bars.svg"/>
+	</div>
 
 <div class="super_container">
 	
@@ -284,7 +305,13 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 
 @stack('scripts')
 
-
+<script>
+	$(function(){
+		setTimeout(() => {
+			$(".loader").fadeOut(300);
+		},1500)
+	})
+</script>
 
 </body>
 

@@ -18,6 +18,7 @@ class C_Destinasi extends Controller
                     ->addColumn('action', function($row){
                         $actionBtn = '<button type="button" class="btn btn-success btn-sm btn-icon-text mr-3 btn_edit" id="btn_edit" data-id="'.$row->id.'" style="color:white">Edit Destinasi <i class="typcn typcn-edit btn-icon-append" style="color:white"></i></button>
                         <button type="button" class="btn btn-danger btn-sm btn-icon-text mr-3" id="btn_delete" data-id="'.$row->id.'">Delete Destinasi <i class="typcn typcn-delete-outline btn-icon-append" style="color:white"></i></button';
+                        
                         return $actionBtn;
                     })
                     ->rawColumns(['action'])
@@ -90,6 +91,7 @@ class C_Destinasi extends Controller
                         'foto' => $foto,
                         'status' => $request->status,
                     ]);
+                    
                     return response()->json(['code' => 1]);
                 } 
             }
@@ -145,6 +147,7 @@ class C_Destinasi extends Controller
                             'status' => $request->status,
                         ]);
                     }
+                    
                     return response()->json(['code' => 1]);
                 } 
             }
@@ -153,6 +156,7 @@ class C_Destinasi extends Controller
         public function delete(Request $request)
         {
             if ($request->ajax()) {
+                
                 $data = M_Destinasi::find($request->id);
                 @unlink('assets/images/destinasi/'.$data->foto);
                 $data->delete();

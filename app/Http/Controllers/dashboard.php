@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\Models\M_Berita;
 use App\Models\M_Destinasi;
 use App\Models\M_Review;
+use App\Models\M_LogActivity;
+use DataTables;
 class dashboard extends Controller
 {
     public function home(){
@@ -34,16 +36,23 @@ class dashboard extends Controller
         return view('Admin.destinasi');
     }
 
-    public function input_destinasi(){
-        return view('Admin.input-destinasi');
-    }
-
     public function userlist(){
         return view('Admin.user-list');
     }
 
-    public function input_user(){
-        return view('Admin.input-user');
+    public function logactivity(Request $request){
+        if ($request->ajax()) {
+            $data = M_LogActivity::get();
+            return Datatables::of($data)
+                ->addIndexColumn()
+                ->addColumn('action', function(){
+                    
+                })
+                ->rawColumns(['action'])
+                ->make(true);
+        }
+        return view('Admin.logactivity');
+        
     }
 
 }

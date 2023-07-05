@@ -59,6 +59,7 @@ class C_KategoriBerita extends Controller
             if (!$validator->passes()) {
                 return response()->json(['code' => 0, 'error' => $validator->errors()->toArray()]);
             } else {
+                
                 M_KategoriBerita::create([
                     'nama' => $request->nama,
                 ]);
@@ -87,8 +88,10 @@ class C_KategoriBerita extends Controller
             } else {
                 $data = M_KategoriBerita::find($request->id);
                 $data->update([
+                    
                     'nama' => $request->nama,
                 ]);
+                
                 return response()->json(['code' => 1]);
             } 
         }
@@ -102,6 +105,7 @@ class C_KategoriBerita extends Controller
             if ($checkbeerita->count() > 0) {
                 return response()->json(['code' => 2]);
             } else {
+                
                 $data->delete();
             }
             return response()->json(['code' => 1]);
