@@ -18,8 +18,8 @@
 
 				<div class="home_slider_content text-center">
 					<div class="home_slider_content_inner" data-animation-in="flipInX" data-animation-out="animate-out fadeOut">
-						<h1>Sistem Informasi Wisata</h1>
-						<h1>Kabupaten Gianyar</h1>
+						<h1></h1>
+						<h1>Gianyar Adventure</h1>
 						<div class="button home_slider_button"><div class="button_bcg"></div><a href="/destinasi">explore now<span></span><span></span><span></span></a></div>
 					</div>
 				</div>
@@ -31,8 +31,8 @@
 
 				<div class="home_slider_content text-center">
 					<div class="home_slider_content_inner" data-animation-in="flipInX" data-animation-out="animate-out fadeOut">
-						<h1>discover</h1>
-						<h1>Bali Island</h1>
+						<h1></h1>
+						<h1>Gianyar Adventure</h1>
 						<div class="button home_slider_button"><div class="button_bcg"></div><a href="/destinasi">explore now<span></span><span></span><span></span></a></div>
 					</div>
 				</div>
@@ -44,8 +44,8 @@
 
 				<div class="home_slider_content text-center">
 					<div class="home_slider_content_inner" data-animation-in="flipInX" data-animation-out="animate-out fadeOut">
-						<h1>discover</h1>
-						<h1>Bali Island</h1>
+						<h1></h1>
+						<h1>Gianyar Adventure</h1>
 						<div class="button home_slider_button"><div class="button_bcg"></div><a href="destinasi">explore now<span></span><span></span><span></span></a></div>
 					</div>
 				</div>

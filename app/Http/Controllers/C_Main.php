@@ -14,6 +14,7 @@ class C_Main extends Controller
         $data['berita'] = M_Berita::with('kategori')->where('status','Aktif')->orderBy('id','desc')->paginate(4);
         $data['destinasi'] = M_Destinasi::with('kategori')->where('status','Aktif')->orderBy('id','desc')->paginate(3);
         $data['review'] = M_Review::orderBy('id','desc')->paginate(6);
+        
         return view('index',$data);
     }
     public function review(Request $request){

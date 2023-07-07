@@ -14,6 +14,7 @@ class dashboard extends Controller
         $data['destinasi'] = M_Destinasi::get();
         $data['berita'] = M_Berita::get();
         $data['review'] = M_Review::get();
+        $data['log'] = M_LogActivity::get();
         return view('Admin.dashboard',$data);
     }
     public function login(){

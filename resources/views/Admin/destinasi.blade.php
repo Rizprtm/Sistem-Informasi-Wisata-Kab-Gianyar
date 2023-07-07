@@ -30,6 +30,9 @@
                         <small>*Ukuran foto maksimal 2048kb.</small>
                         <br>
                         <span class="text-danger error-text foto_error"></span>
+                        <div class="form-group" style="font-size: 0">
+                            <img id="preview-foto" src="" style="max-height: 500px;">
+                    </div>
                     </div>
                     
                     <div class="form-group">
@@ -51,9 +54,7 @@
     </div>
     <div class="col-md-3">
         
-        <div class="form-group" style="font-size: 0">
-                <img id="preview-foto" src="" style="max-height: 500px;">
-        </div>
+        
         
     </div>
 </div>

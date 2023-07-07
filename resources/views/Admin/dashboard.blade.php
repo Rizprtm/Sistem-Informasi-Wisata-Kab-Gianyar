@@ -85,8 +85,8 @@
             <div class="col-md-6 stretch-card transparent">
               <div class="card card-light-danger">
                 <div class="card-body">
-                  <p class="mb-4">Number of Clients</p>
-                  <p class="fs-30 mb-2">47033</p>
+                  <p class="mb-4">Log Activity</p>
+                  <p class="fs-30 mb-2">{{ $log->count() }}</p>
                   
                 </div>
               </div>
@@ -95,7 +95,7 @@
         </div>
       </div>
       
-      <div class="row">
+      {{-- <div class="row">
         <div class="col-md-12 grid-margin stretch-card">
           <div class="card position-relative">
             <div class="card-body">
@@ -196,10 +196,6 @@
           </div>
         </div>
       </div>
-      
-     
-        
-        
         <div class="row">
             <div class="col-md-12 grid-margin stretch-card">
               <div class="card">
@@ -249,7 +245,7 @@
             
           </div>
         
-      </div>
+      </div> --}}
       
     <!-- content-wrapper ends -->
     <!-- partial:partials/_footer.html -->
